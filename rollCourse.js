@@ -113,8 +113,6 @@ let content = `
   ${generateAllDropDown(getCourseFlag())}
    <button value="Set courses" onclick="game.user.setFlag('world','courseLoad', [document.getElementById('course1').value,document.getElementById('course2').value,document.getElementById('course3').value,document.getElementById('course4').value])">Set courses</button>
 </form>
-
-<button value="Roll courses" ></button>
 `;
 
 
