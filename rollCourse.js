@@ -49,13 +49,6 @@ function getCourseFlag(){
   return ret;
 }
 
-function setCourseFlag(nb, value){
-    console.log(nb,value);
-    let courseLoad = getCourseFlag();
-    courseLoad[nb - 1] = value;
-    game.user.setFlag("world", "courseLoad", courseLoad);
-}
-
 function generateCourseOption(currentCourse, defaultCourse){
     let courseOption = `
         <option 
@@ -98,14 +91,6 @@ function generateAllDropDown(courseLoad){
     ret += generateCourseDropDown(i, courseLoad);
   }
   return ret;
-}
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-function rollCourse(){
-    let randomCourse = getCourseFlag()[getRandomInt(4)];
 }
 
 let content = `
